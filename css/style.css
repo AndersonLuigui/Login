@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+body {
+    background-image: url("none");
+    background-position:  center;
+    background-attachment: fixed;
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+
+
+}
+
+
+
+.logo img {
+    width: 40px;
+    height: 40px;
+    border-radius: 3px;
+}
+
+.navbox {
+    margin: 0 1vw;
+    border-bottom: 2px solid #3f3f3f11;
+    transition: 2s;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.navbox:hover {
+    transition: 2s;
+    border-bottom: 2px solid #757575;
+}
+
+.navbox img {
+    margin-right: auto;
+}
+
+.navbox ul {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.navbox ul li {
+    justify-content: center;
+    list-style: none;
+    border-radius: 3px;
+    transition: background-color 0.9s, opacity 0.9s;
+}
+
+.navbox ul li:hover {
+    cursor: pointer;
+    transition: 0.9s;
+    background-color: #f7e10c;
+}
+
+.navbox ul li a {
+    text-decoration: none;
+    color: #000000;
+    transition: color 0.9s; 
+}
+
+.navbox ul li:hover a {
+    color: #000000;
+}
+
+li {
+    padding: 8px;
+    width: 100px;
+    height: 25px;
+}
+
+/* FORM --------------------------------------------- */
+
+input {
+    border-radius: 3px;
+    height: 24px;
+    font-size: 16px;
+    padding-left: 4px;
+}
+
+input::placeholder {
+    color: rgba(128, 128, 128, 0.493); 
+    font-style: normal; 
+    padding-left: 4px;
+}
+
+button {
+    font-size:large;
+    cursor: pointer;
+    border-radius: 3px;
+    height: 9vh;
+    color: rgb(46, 6, 6);
+    border: 1px solid #3c3c3c;
+}
+
+button:hover {
+    transition: 1s;
+    background-color: #3c3c3c;
+    color: white;
+}
+
+
+/* CONTEÚDO ======================================== */
+
+
+.container {
+    margin: 0 1vw;
+    padding: 2vh 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 13px; /* Espaço entre as divs */
+
+    
+}
+
+.block1, .block2 {
+    border-radius: 8px;
+    border: 1px solid #ccc; /* Para visualizar melhor as divs */
+    padding: 3vw;
+    height: 65vh;
+    margin-inline: 5px;
+
+}
+
+.block1 {
+    width: 35vw;
+}
+
+.block2 {
+    width: 70vw;
+}
+
+.block1 form, h1 {
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.block1 label, .block1 input, .block1 button {
+    margin-bottom: 13px;
+}
+
+.block2 img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* FOOTER ------------------------------------------------------------ */
+footer {
+    width: 100%;
+    padding: 1rem 0;
+    background-color: #f0f0f0;
+    text-align: center;
+    margin-top: auto; /* Empurra o footer para o fim da página */
+}
+
+footer p {
+    margin: 0;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* RESPONSIVIDADE ------------------------------------------------------------ */
+
+@media (max-width: 768px) {
+    .navbox {
+        flex-direction: column; 
+        align-items: stretch; 
+    }
+
+    .navbox ul {
+        flex-direction: column; 
+        text-align: center;
+    }
+
+    .navbox ul li {
+        width: 100%; 
+        padding: 12px 0; 
+        border-bottom: 1px solid #ccc; 
+    }
+
+    .navbox ul li:last-child {
+        border-bottom: none; 
+    }
+
+    .navbox img {
+        background-color: #f7e10c;
+    }
+
+    .logo {
+        text-align: center;
+    }
+
+    .logo img {
+        width: 150px;
+        height: 150px;
+        border-radius: 8px;
+    }
+
+
+
+
+
+    /* CONTEÚDO -------------- */
+
+    .container {
+        padding-top: 40px;
+        flex-direction: column;
+    }
+
+    .block1, .block2 {
+        width: 75vw;
+        border-radius: 8px;
+    
+    }
+
+    .block1 {
+        height: 75vh;
+    }
+
+    .block2 {
+        height: 85vh;
+    }
+
+
+
+/* FOOTER */
+    footer {
+        width: 100%;
+        padding: 1rem 0;
+        background-color: #f0f0f0;
+        text-align: center;
+    }
+    
+    footer p {
+        margin: 0;
+        color: #666;
+        font-size: 0.9rem;
+    }
+
+}
+
+

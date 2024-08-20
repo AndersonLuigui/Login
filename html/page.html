@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Bem vindo</title>
+</head>
+<body>
+    <div class="navbox">
+        <div class="logo">
+            <img src="/img/logo.png" alt="Logo">
+        </div>
+        <ul>
+            <li><a href="#">Início</a></li>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Projetos</a></li>
+            <li><a href="#">Contato</a></li>
+
+        </ul>
+    </div>
+
+    <div class="container">
+        <h1 id="welcomeMessage">Seja bem-vindo</h1>
+
+    </div>
+
+
+<!--     <footer>
+        <p>© 2024 Anderson Luigui. Todos os direitos reservados.</p>
+    </footer> -->
+    
+    <script>
+        // Recupera o nome do usuário do localStorage
+        const username = localStorage.getItem('username');
+        // Atualiza a mensagem de boas-vindas
+        if (username) {
+            document.getElementById('welcomeMessage').textContent = `Seja bem-vindo, ${username}!`;
+        }
+    </script>
+    <script src="./js/script.js"></script>
+    
+</body>
+</html>
