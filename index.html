@@ -9,24 +9,25 @@
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
     <script>
-        // Iniciando widget
+        // Inicializando o widget e configurando eventos
         document.addEventListener("DOMContentLoaded", function () {
             if (window.netlifyIdentity) {
+                // Evento quando o widget é inicializado
                 window.netlifyIdentity.on("init", user => {
-                    if (!user) {
-                        // Adiciona o evento de login
-                        window.netlifyIdentity.on("login", () => {
-                            document.location.href = "./html/page.html";
-                        });
+                    if (user) {
+                        // Se o usuário está logado, redireciona para page.html
+                        document.location.href = "./html/page.html";
                     }
                 });
 
-                // Espera até que o widget esteja inicializado para verificar o usuário
-                window.netlifyIdentity.on("init", user => {
-                    if (!user) {
-                        // Se o usuário não está logado, redireciona para index.html
-                        document.location.href = "index.html";
-                    }
+                // Evento quando o usuário faz login
+                window.netlifyIdentity.on("login", () => {
+                    document.location.href = "./html/page.html";
+                });
+
+                // Evento quando o usuário faz logout
+                window.netlifyIdentity.on("logout", () => {
+                    document.location.href = "index.html";
                 });
             }
         });
@@ -57,8 +58,8 @@
                 <label for="password"><h3>Senha:</h3></label>
                 <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
         
-                <button type="submit">Login Exclusivo</button>
-                <button type="button" onclick="netlifyIdentity.open()">Entrar com Google/GitHub</button>
+                <button type="submit">Entrar como Dev</button>
+                <button type="button" onclick="netlifyIdentity.open()">Acesso Público</button>
             </form>
             <p id="loginResult"></p>
         </div>
@@ -72,7 +73,6 @@
         <p>© 2024 Anderson Luigui. Todos os direitos reservados.</p>
     </footer>
     
-
     <script src="./js/script.js"></script>
 </body>
 </html>
