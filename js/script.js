@@ -1,7 +1,11 @@
+
+
+
 const users = [
     { username: 'AndersonLuigui', password: 'senha123' },
-    { username: 'usuario2', password: 'abcd1234' },
-    { username: 'emanuel', password: '1234' }
+    { username: 'Neura', password: 'neura123' },
+    { username: 'emanuel', password: '1234' },
+    { username: 'joãomiguel', password: 'joaomiguel123'}
 ];
 
 const loginForm = document.getElementById('loginForm');
@@ -24,3 +28,5 @@ loginForm.addEventListener('submit', function(event) {
         loginResult.textContent = 'Usuário ou senha incorretos.';
     }
 });
+
+

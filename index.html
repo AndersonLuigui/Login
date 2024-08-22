@@ -4,6 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
+
+    <!-- Chamando o widget -->
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
+    <script>
+        // Iniciando widget
+        document.addEventListener("DOMContentLoaded", function () {
+            if (window.netlifyIdentity) {
+                window.netlifyIdentity.on("init", user => {
+                    if (!user) {
+                        // Adiciona o evento de login
+                        window.netlifyIdentity.on("login", () => {
+                            document.location.href = "./html/page.html";
+                        });
+                    }
+                });
+
+                // Espera até que o widget esteja inicializado para verificar o usuário
+                window.netlifyIdentity.on("init", user => {
+                    if (!user) {
+                        // Se o usuário não está logado, redireciona para index.html
+                        document.location.href = "index.html";
+                    }
+                });
+            }
+        });
+    </script>
+
     <title>Login</title>
 </head>
 <body>
@@ -16,7 +44,6 @@
             <li><a href="#">Sobre</a></li>
             <li><a href="#">Projetos</a></li>
             <li><a href="#">Contato</a></li>
-
         </ul>
     </div>
 
@@ -31,6 +58,7 @@
                 <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
         
                 <button type="submit">Entrar</button>
+                <button type="button" onclick="netlifyIdentity.open()">Entrar</button>
             </form>
             <p id="loginResult"></p>
         </div>
@@ -40,13 +68,11 @@
         </div>
     </div>
 
-
     <footer>
         <p>© 2024 Anderson Luigui. Todos os direitos reservados.</p>
     </footer>
     
 
     <script src="./js/script.js"></script>
-    
 </body>
 </html>
