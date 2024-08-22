@@ -22,13 +22,11 @@
 
                 // Evento quando o usuário faz login
                 window.netlifyIdentity.on("login", () => {
-                    document.getElementById("loginStatus").textContent = `Bem-vindo, ${user.user_metadata.full_name}!`;
                     document.location.href = "./html/page.html";
                 });
 
                 // Evento quando o usuário faz logout
                 window.netlifyIdentity.on("logout", () => {
-                    document.getElementById("loginStatus").textContent = 'Você foi desconectado.';
                     document.location.href = "index.html"; // Essa linha de saída pode ser alterada para outra page
                 });
 
@@ -69,7 +67,6 @@
                 <button type="button" onclick="netlifyIdentity.open()">Acesso Público</button>
             </form>
             <p id="loginResult"></p>
-            <p id="loginStatus"></p>
         </div>
 
         <div class="block2">
