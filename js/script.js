@@ -2,7 +2,9 @@ const users = [
     { username: 'AndersonLuigui', password: 'senha123' },
     { username: 'Neura', password: 'neura123' },
     { username: 'emanuel', password: '1234' },
-    { username: 'joãomiguel', password: 'joaomiguel123' }
+    { username: 'joãomiguel', password: 'joaomiguel123' },
+    { username:'Matheus', password: 'matheus123'}
+
 ];
 
 const loginForm = document.getElementById('loginForm');
