@@ -3,7 +3,8 @@ const users = [
     { username: 'Neura', password: 'neura123' },
     { username: 'emanuel', password: '1234' },
     { username: 'joãomiguel', password: 'joaomiguel123' },
-    { username:'Matheus', password: 'matheus123'}
+    { username:'Matheus', password: 'matheus123'},
+    { username: 'Ricardo', password: 'ricardo2td'}
 
 ];
 
